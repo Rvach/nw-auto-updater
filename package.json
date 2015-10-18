@@ -1,6 +1,6 @@
 {
   "name": "nw-auto-updater",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A high level API to make node-webkit apps auto updating easy",
   "main": "updater.js",
   "repository": {
