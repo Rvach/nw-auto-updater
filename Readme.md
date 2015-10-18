@@ -28,9 +28,9 @@ Configure NWAU.
 	* **remoteManifest** `String` the remote manifest file url, like `http://www.exemple.com?version={{version}}`. NWAU will replace `{{version}}` with the package.json version
 	* **tmpManifest** `String` the path where manifest will be stored, like `path.resolve('./tmp/update_manifest.json')`. `tmp` directory must exists
 	* **tmpArchive** `String` the path where zip archive will be stored, like `path.resolve('./tmp/update_archive.zip')`. `tmp` directory must exists
-	* **update**-not-available `Function` callback called if updates are not available (server unreachable or client up to date)
-	* **update**-available `Function` callback called if updates are available (server return a status 200 code)
-	* **update**-downloaded `Function` callback called when zip archive is downloaded 
+	* **update-not-available** `Function` callback called if updates are not available (server unreachable or client up to date)
+	* **update-available** `Function` callback called if updates are available (server return a status 200 code)
+	* **update-downloaded** `Function` callback called when zip archive is downloaded 
 	* **error** `Function` callback called if ay errors are encountered
 
 ### launch
