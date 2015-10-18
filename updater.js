@@ -36,7 +36,10 @@ var install = function()
 var download = function()
 {
 	var manifest = fs.readFileSync(configuration.tmpManifest, configuration.encoding);
-	manifest = JSON.parse(manifest);
+	try {
+		manifest = JSON.parse(manifest);
+	}
+	catch(e) { configuration['update-not-available'](); return false; }
 
 	var pkg = progress(request(manifest.url), function(err, res)
 	{
@@ -59,7 +62,7 @@ var launch = function()
 		if(err)
 			configuration.error(err);
 
-		if(response.statusCode == 200 && response.headers['content-type'].indexOf("json") > 1)
+		if(response.statusCode == 200 && response.headers['content-type'].indexOf("json") > -1)
 			configuration['update-available']();
 
 		else
