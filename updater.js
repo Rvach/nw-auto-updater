@@ -14,6 +14,7 @@ var configuration = {
 	'update-not-available' : function() {},
 	'update-available'     : function() {},
 	'update-downloaded'    : function() {},
+	'update-downloading'   : function() {},
 	'update-installed'     : function() {},
 	'error'                : function() {}
 };
@@ -49,6 +50,9 @@ var download = function()
 
 	pkg.pipe(fs.createWriteStream(configuration.tmpArchive));
 	pkg.on('error', configuration.error);
+	pkg.on('progress', function(state) {
+		configuration['update-downloading'](state);
+	});
 	pkg.on('end', function() {
 		install();
 		configuration['update-downloaded']();

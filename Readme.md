@@ -31,6 +31,7 @@ Configure NWAU.
 	* **update-not-available** `Function` callback called if updates are not available (server unreachable or client up to date)
 	* **update-available** `Function` callback called if updates are available (server return a status 200 code)
 	* **update-downloaded** `Function` callback called when zip archive is downloaded 
+	* **update-downloading** `Function` callback called when download is progressing
 	* **error** `Function` callback called if ay errors are encountered
 
 ### launch
@@ -70,6 +71,9 @@ updater.configure({
 	},
 	'update-not-available' : function() {
 		console.log('not available');
+	},
+	'update-downloading' : function(state) {
+		console.log('downloading, ' + state.percent + " %");
 	},
 	'update-downloaded' : function() {
 		console.log('zip downloaded');
