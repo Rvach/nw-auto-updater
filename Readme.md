@@ -55,7 +55,7 @@ The only required key is "url" the others are optional. NWAU only supports insta
 ### Exemple 
 
 ```javascript
-var updater = require('updater');
+var updater = require('nw-auto-updater');
 var path = require('path');
 
 updater.configure({
