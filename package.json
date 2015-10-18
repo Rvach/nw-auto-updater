@@ -1,0 +1,30 @@
+{
+  "name": "nw-auto-updater",
+  "version": "1.0.0",
+  "description": "A high level API to make node-webkit apps auto updating easy",
+  "main": "updater.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/constrom/nw-auto-updater.git"
+  },
+  "keywords": [
+    "node-webkit",
+    "update",
+    "auto",
+    "api"
+  ],
+  "author": "Thibault Walle <thibault.walle@outlook.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/constrom/nw-auto-updater/issues"
+  },
+  "homepage": "https://github.com/constrom/nw-auto-updater#readme",
+  "dependencies": {
+    "request": "^2.65.0",
+    "request-progress": "^0.3.1",
+    "unzip": "^0.1.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.7.1"
+  }
+}
