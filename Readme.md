@@ -63,6 +63,7 @@ updater.configure({
 	'tmpManifest'    : path.resolve('tmp/update_manifest.json'),
 	'tmpArchive'     : path.resolve('tmp/update_archive.zip'),
 	'extractPath'    : path.resolve('.'),
+	'nwGui'          : require('nw.gui'),
 
 	'update-available' : function() {
 		console.log('available');

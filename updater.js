@@ -23,7 +23,7 @@ var configure = function(options)
 	for(var property in options)
 		configuration[property] = options[property];
 
-	configuration.remoteManifest = configuration.remoteManifest.replace(/{{version}}/, "0.0.0");
+	configuration.remoteManifest = configuration.remoteManifest.replace(/{{version}}/, configuration['nwGui'].App.manifest.version;);
 };
 
 var install = function()
