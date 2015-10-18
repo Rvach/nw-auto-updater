@@ -88,3 +88,7 @@ updater.configure({
 
 updater.launch();
 ```
+
+## TODO
+
+Refactor callbacks to events
