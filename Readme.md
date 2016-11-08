@@ -66,6 +66,7 @@ updater.configure({
 	'extractPath'    : path.resolve('.'),
 	'nwGui'          : require('nw.gui'),
 
+
 	'update-available' : function() {
 		console.log('available');
 	},
@@ -92,3 +93,5 @@ updater.launch();
 ## TODO
 
 Refactor callbacks to events
+
+Replace unzip with adm-zip.
